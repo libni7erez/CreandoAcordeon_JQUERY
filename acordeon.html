@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Creando Acordeones </title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>MI ACORDEON</h1>
+	<hr>
+
+	<div align="center">
+		<dl>
+			<dt>Ropa</dt>
+			<dd>Marcas</dd>
+			<dt>Zapatos</dt>
+			<dd>Hombre</dd>
+			<dt>Camisas</dt>
+			<dd>Hombre</dd>
+			<dt>Pantalones</dt>
+		    <dd>Hombre</dd>	
+
+		</dl>
+	</div>
+</div>
+
+
+<script>
+ ( function(){
+
+ 	var dds= $('dd');
+ 	dds.hide(); //Ocultamos los elementos
+
+ 	dds.eq(0).show(); //mostramos un elemento
+
+ 	$('dt').on("mouseenter", function(){ //Hacemos que al pasar el Mouse , tenga el efecto de acordeon
+
+ 		dds.slideUp(200);
+
+ 		$(this)
+ 		.next()
+ 		.slideDown(200);
+
+ 	})
+
+ })();
+
+</script>
+
+
+</body>
+</html>
